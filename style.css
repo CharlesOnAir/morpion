@@ -1,0 +1,56 @@
+body {
+    padding: 3em;
+}
+h1 {
+    text-align: center;
+}
+
+#start_section {
+    text-align:center;
+}
+
+#start_section button {
+    margin-top: 1em;
+}
+
+#infos_section {
+    margin-top: 1em;
+    text-align:center;
+    justify-content: center;
+    display: none;
+}
+
+#infos_section .col:first-child {
+    margin-right: 10px;
+}
+
+#infos_section .col {
+    padding: 0px;
+}
+
+#game_section {
+    text-align: center;
+    justify-content: center;
+    margin-top: 1em;
+    display: none;
+}
+
+#game_table {
+    display: inline-block;
+}
+
+#game_table button {
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 5px;
+    float:left;
+    border: none;
+}
+
+#logger {
+    text-align: left;
+    width: 50%;
+    margin-left: 2em;
+}

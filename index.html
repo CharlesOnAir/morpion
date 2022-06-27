@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jeu du Morpion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Jeu du Morpion</h1>
+    <div id="start_section">
+        <button type="button" onclick="start()" class="btn btn-primary">Débuter une partie</button>
+    </div>
+    <div id="infos_section">
+        <div class="row g-3 w-50">
+            <div class="col">
+              <input id="nom_joueur_1" type="text" class="form-control" placeholder="Nom joueur 1" aria-label="Nom joueur 1">
+            </div>
+            <div class="col">
+              <input id="nom_joueur_2" type="text" class="form-control" placeholder="Nom joueur 2" aria-label="Nom joueur 2">
+            </div>
+            <button type="button" onclick="start_game()" class="btn btn-primary">Débuter une partie</button>
+          </div>
+    </div>
+    <div id="game_section">
+        <div id="game_table">
+            <div>
+                <button id="morpion"></button>
+                <button id="morpion"></button>
+                <button id="morpion"></button>
+            </div>
+            <div>
+                <button id="morpion"></button>
+                <button id="morpion"></button>
+                <button id="morpion"></button>
+            </div>
+            <div>
+                <button id="morpion"></button>
+                <button id="morpion"></button>
+                <button id="morpion"></button>
+            </div>
+        </div>
+        <div id="logger">
+            <h3>Informations du jeu</h3>
+            <table class="table">
+                <tbody id="logger_inputs"></tbody>
+              </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
