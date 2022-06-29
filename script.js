@@ -24,9 +24,11 @@ function main() {
             jeuEstFini = rechercherVainqueur(pions, joueurs, tour);
     
             if (jeuEstFini) {
-              logger("Le joueur " +
-              joueurs[tour][0] +
-            ' a gagné ! <br /> <a href="">Rejouer</a>');
+              const data_logger = this.logger("Le joueur " +
+                joueurs[tour][0] +
+              ' a gagné ! <br /> <a href="">Rejouer</a>');
+              const logger_inputs = document.getElementById('logger_inputs');
+              logger_inputs.innerHTML += data_logger;
               sendMessage(
                 "Le joueur " +
                     joueurs[tour][0] +
@@ -41,7 +43,9 @@ function main() {
               );
               return;
             }
-            logger("Joueur " + joueurs[tour][0] + " vient de jouer");
+            const data_logger = this.logger("Joueur " + joueurs[tour][0] + " vient de jouer");
+            const logger_inputs = document.getElementById('logger_inputs');
+            logger_inputs.innerHTML += data_logger;
             tour++;
             tour = tour % 2;
             sendMessage("Joueur " + joueurs[tour][0] + " c'est à vous !");
@@ -50,12 +54,11 @@ function main() {
       }
 }
 
-function logger(data) {
-    const logger_inputs = document.getElementById('logger_inputs');
-    logger_inputs.innerHTML += '<tr><td>'+data+'</td></tr>';
+module.exports.logger = (data) => {
+    return '<tr logger=true><td>'+data+'</td></tr>';
 }
 
-function matchNul(pions) {
+function matchNul (pions) {
     for (var i = 0, len = pions.length; i < len; i++) {
       if (pions[i].innerHTML.length == 0) return false;
     }
@@ -197,5 +200,6 @@ function start_game() {
     }
     infos_section.style.display = 'none';
     main();
-    logger('Démarrage du jeu avec ' + joueur_1.value + ' et ' + joueur_2.value);
-}
+    const data_logger = this.logger('Démarrage du jeu avec ' + joueur_1.value + ' et ' + joueur_2.value);
+    logger_inputs.innerHTML += data_logger;
+} 

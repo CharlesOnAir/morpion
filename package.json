@@ -1,0 +1,22 @@
+{
+  "name": "morpion",
+  "version": "1.0.0",
+  "description": "### Jeu fictif pour projet d'école",
+  "main": "script.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlesOnAir/morpion.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlesOnAir/morpion/issues"
+  },
+  "homepage": "https://github.com/CharlesOnAir/morpion#readme"
+}
