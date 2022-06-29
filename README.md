@@ -10,3 +10,6 @@ Javascript vanilla utilisé pour le développement, Bootstrap pour le design, et
 - Mettre en place un système de classement
 - Proposer le multijoueur
 - Proposer de jouer contre l'ordinateur
+
+### Trello du projet
+https://trello.com/b/bjfwT5T1/d%C3%A9veloppement

@@ -24,7 +24,7 @@ function main() {
             jeuEstFini = rechercherVainqueur(pions, joueurs, tour);
     
             if (jeuEstFini) {
-              const data_logger = this.logger("Le joueur " +
+              const data_logger = logger("Le joueur " +
                 joueurs[tour][0] +
               ' a gagné ! <br /> <a href="">Rejouer</a>');
               const logger_inputs = document.getElementById('logger_inputs');
@@ -43,7 +43,7 @@ function main() {
               );
               return;
             }
-            const data_logger = this.logger("Joueur " + joueurs[tour][0] + " vient de jouer");
+            const data_logger = logger("Joueur " + joueurs[tour][0] + " vient de jouer");
             const logger_inputs = document.getElementById('logger_inputs');
             logger_inputs.innerHTML += data_logger;
             tour++;
@@ -54,7 +54,7 @@ function main() {
       }
 }
 
-module.exports.logger = (data) => {
+function logger (data) {
     return '<tr logger=true><td>'+data+'</td></tr>';
 }
 
@@ -200,6 +200,8 @@ function start_game() {
     }
     infos_section.style.display = 'none';
     main();
-    const data_logger = this.logger('Démarrage du jeu avec ' + joueur_1.value + ' et ' + joueur_2.value);
+    const data_logger = logger('Démarrage du jeu avec ' + joueur_1.value + ' et ' + joueur_2.value);
     logger_inputs.innerHTML += data_logger;
 } 
+
+module.exports = logger;
